@@ -4,6 +4,6 @@
 format: jb-book
 root: intro
 chapters:
-- file: Pengantar Data mining
+- file: Pengantar Data Mining
 - file: Memahami Data
-- file:  Data Understanding
+- file: Data Understanding
