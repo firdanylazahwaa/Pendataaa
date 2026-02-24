@@ -1,4 +1,4 @@
-## Memahami Data 
+# Memahami Data 
 
 **Pengertian Data Understanding**
 

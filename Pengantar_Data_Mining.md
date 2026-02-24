@@ -1,4 +1,4 @@
-## Pengantar Data Mining
+# Pengantar Data Mining
 
 **Pengertian Data Mining**
 
