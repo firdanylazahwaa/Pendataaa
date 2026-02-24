@@ -11,12 +11,6 @@ NIM: 240411100039
 Siap untuk mengeksplorasi data, mencoba berbagai tools, dan menemukan insight menarik?
 Yuk mulai perjalanan kita di dunia data mining !!!!
 
-## 📚 Materi
-
-- [Pengantar Data Mining](Pengantar_Data_Mining.html)  
-- [Memahami Data](Memahami_Data.html)  
-- [Data Understanding](Data_Understanding.html)
-
 
 ```{tableofcontents}
 ```
