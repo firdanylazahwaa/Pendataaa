@@ -1,8 +1,3 @@
----
-title: Untitled
-
----
-
 ## Memahami Data 
 
 **Pengertian Data Understanding**
