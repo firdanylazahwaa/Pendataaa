@@ -1,9 +1,10 @@
 # Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
+# https://jupyterbook.org/customize/toc.html
 
 format: jb-book
 root: intro
+
 chapters:
-- file: Pengantar Data Mining
-- file: Memahami Data
-- file: Data Understanding
+  - file: Pengantar_Data_Mining
+  - file: Memahami_Data
+  - file: Data_Understanding
