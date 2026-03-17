@@ -10,3 +10,4 @@ chapters:
   - file: Data_Understanding
   - file: pengukuran jarak
   - file: Missing Value Imputation Menggunakan WKNN
+  - file: Preprocessing

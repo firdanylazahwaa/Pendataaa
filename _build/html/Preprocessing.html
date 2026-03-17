@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>SELAMAT DATANG DI PENAMBANGAN DATA &#8212; Penambangan Data</title>
+    <title>Preprocessing &#8212; Penambangan Data</title>
   
   
   
@@ -62,10 +62,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Preprocessing';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Pengantar Data Mining" href="Pengantar_Data_Mining.html" />
+    <link rel="prev" title="Missing Value Imputation Menggunakan WKNN" href="Missing%20Value%20Imputation%20Menggunakan%20WKNN.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -128,8 +130,6 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -148,7 +148,7 @@ const thebe_selector_output = ".output, .cell_output"
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -168,19 +168,19 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     SELAMAT DATANG DI PENAMBANGAN DATA
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Pengantar_Data_Mining.html">Pengantar Data Mining</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Memahami_Data.html">Memahami Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Data_Understanding.html">Data Understanding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pengukuran%20jarak.html">Pengukuran Jarak</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Missing%20Value%20Imputation%20Menggunakan%20WKNN.html">Missing Value Imputation Menggunakan WKNN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Preprocessing.html">Preprocessing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Preprocessing</a></li>
 </ul>
 
     </div>
@@ -252,7 +252,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FPreprocessing.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -282,7 +282,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/Preprocessing.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -292,7 +292,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -364,7 +364,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>SELAMAT DATANG DI PENAMBANGAN DATA</h1>
+    <h1>Preprocessing</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -378,24 +378,167 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="selamat-datang-di-penambangan-data">
-<h1>SELAMAT DATANG DI PENAMBANGAN DATA<a class="headerlink" href="#selamat-datang-di-penambangan-data" title="Permalink to this heading">#</a></h1>
-<p>Di era digital seperti sekarang, data ada di mana-mana. Tapi data saja belum cukup — kita perlu mengolahnya agar bisa menjadi informasi yang bermakna dan membantu dalam pengambilan keputusan.</p>
-<p>Di materi ini, kita akan belajar bagaimana cara “menambang” data untuk menemukan pola tersembunyi, melakukan klasifikasi, clustering, hingga membuat prediksi berbasis data. Semua dibahas dengan pendekatan yang mudah dipahami dan langsung praktik.</p>
-<p>Nama: Firda Nayla Zahwa</p>
-<p>NIM: 240411100039</p>
-<p>Siap untuk mengeksplorasi data, mencoba berbagai tools, dan menemukan insight menarik?
-Yuk mulai perjalanan kita di dunia data mining !!!!</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Pengantar_Data_Mining.html">Pengantar Data Mining</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Memahami_Data.html">Memahami Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Data_Understanding.html">Data Understanding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pengukuran%20jarak.html">Pengukuran Jarak</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Missing%20Value%20Imputation%20Menggunakan%20WKNN.html">Missing Value Imputation Menggunakan WKNN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Preprocessing.html">Preprocessing</a></li>
+  <section id="preprocessing">
+<h1>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this heading">#</a></h1>
+<p><strong>1. Pengertian Preprocessing</strong></p>
+<p>Preprocessing data merupakan tahapan awal dalam proses data mining maupun machine learning yang bertujuan untuk menyiapkan data sebelum dilakukan analisis. Data yang diperoleh biasanya masih berupa data mentah (raw data) yang belum siap digunakan secara langsung. Dalam kondisi tersebut, sering ditemukan beberapa masalah seperti:</p>
+<ul class="simple">
+<li><p>Adanya data yang kosong (missing value)</p></li>
+<li><p>Data yang tidak konsisten</p></li>
+<li><p>Perbedaan skala antar atribut</p></li>
+<li><p>Data yang mengandung kesalahan atau noise</p></li>
 </ul>
+<p>Oleh karena itu, preprocessing dilakukan untuk memperbaiki kualitas data agar lebih terstruktur dan layak digunakan, sehingga hasil analisis menjadi lebih optimal.</p>
+<p><strong>2. Tahapan Preprocessing Data</strong></p>
+<p>Dalam preprocessing, terdapat beberapa langkah penting yang umumnya dilakukan, yaitu:</p>
+<ul>
+<li><p>Data Cleaning</p>
+<p>Tahap ini berfokus pada pembersihan data dari kesalahan, data duplikat, maupun nilai yang tidak lengkap.</p>
+</li>
+<li><p>Data Integration</p>
+<p>Merupakan proses penggabungan data dari berbagai sumber menjadi satu kesatuan dataset.</p>
+</li>
+<li><p>Data Transformation</p>
+<p>Pada tahap ini, data diubah ke dalam format yang sesuai dengan kebutuhan analisis.</p>
+</li>
+<li><p>Data Normalization</p>
+<p>Proses penyesuaian nilai data ke dalam skala yang sama agar tidak terjadi dominasi oleh atribut tertentu.</p>
+</li>
+</ul>
+<p><strong>3. Normalisasi Data</strong></p>
+<p>Normalisasi adalah proses mengubah nilai data ke dalam rentang tertentu tanpa mengubah pola atau hubungan antar data tersebut.</p>
+<p>Tujuan normalisasi:</p>
+<ul class="simple">
+<li><p>Menyamakan skala antar atribut</p></li>
+<li><p>Menghindari pengaruh berlebih dari nilai yang besar</p></li>
+<li><p>Mempermudah proses perhitungan algoritma seperti KNN, WKNN, dan clustering</p></li>
+<li><p>Beberapa metode normalisasi yang sering digunakan antara lain:</p></li>
+<li><p>Min-Max Normalization</p></li>
+<li><p>Z-Score Normalization</p></li>
+<li><p>Decimal Scaling</p></li>
+</ul>
+<p><strong>3.1</strong> Min-Max Normalization</p>
+<p>Metode ini mengubah nilai data ke dalam rentang tertentu, biasanya antara 0 hingga 1.</p>
+<p>Rumus:</p>
+<div class="math notranslate nohighlight">
+\[
+X' = \frac{X - X_{\min}}{X_{\max} - X_{\min}}
+\]</div>
+<p>Keterangan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+X &amp;= \text{nilai asli} \\
+X_{\min} &amp;= \text{nilai minimum} \\
+X_{\max} &amp;= \text{nilai maksimum} \\
+X' &amp;= \text{hasil normalisasi}
+\end{aligned}
+\end{split}\]</div>
+<p>Contoh:</p>
+<p>Data IPK:</p>
+<p>2, 3, 4</p>
+<p>Nilai minimum = 2
+Nilai maksimum = 4</p>
+<p>Normalisasi nilai 3:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{4 - 2}{3 - 2} = 0.5
+\]</div>
+<p>Hasil:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nilai Asli</p></th>
+<th class="head"><p>Normalisasi</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
 </div>
+<p><strong>3.2</strong> Z-Score Normalization</p>
+<p>Z-Score digunakan untuk mengubah data berdasarkan nilai rata-rata dan standar deviasi.</p>
+<div class="math notranslate nohighlight">
+\[
+Z = \frac{X - \mu}{\sigma}
+\]</div>
+<p>Keterangan:</p>
+<p><span class="math notranslate nohighlight">\(X\)</span> = nilai data<br />
+<span class="math notranslate nohighlight">\(\mu\)</span> = rata-rata (mean)<br />
+<span class="math notranslate nohighlight">\(\sigma\)</span> = standar deviasi<br />
+<span class="math notranslate nohighlight">\(Z\)</span> = hasil normalisasi</p>
+<p>Contoh:</p>
+<p>Data IPK:</p>
+<p>2, 3, 4</p>
+<p>Rata-rata:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{3 + 2 + 3 + 4}{4} = 3
+\]</div>
+<p>Jika nilai yang dinormalisasi adalah 3:</p>
+<div class="math notranslate nohighlight">
+\[
+Z = 0
+\]</div>
+<p>Artinya nilai tersebut berada tepat di rata-rata data.</p>
+<p><strong>3.3</strong> Decimal Scaling Normalization</p>
+<p>Metode ini dilakukan dengan cara membagi nilai data dengan pangkat 10 berdasarkan jumlah digit terbesar.</p>
+<p>Rumus:</p>
+<div class="math notranslate nohighlight">
+\[
+x' = \frac{x}{10^j}
+\]</div>
+<p>Keterangan:</p>
+<p><span class="math notranslate nohighlight">\(X\)</span> = nilai data<br />
+<span class="math notranslate nohighlight">\(j\)</span> = jumlah digit terbesar</p>
+<p>Contoh:</p>
+<p>Data PO:</p>
+<p>200000, 300000, 400000</p>
+<p>Nilai terbesar = 400000 → memiliki 6 digit</p>
+<p>Maka:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{200000}{10^6} = 0.2 \\
+\frac{300000}{10^6} = 0.3 \\
+\frac{400000}{10^6} = 0.4
+\end{split}\]</div>
+<p>Hasil:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nilai Asli</p></th>
+<th class="head"><p>Normalisasi</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>200000</p></td>
+<td><p>0.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>300000</p></td>
+<td><p>0.3</p></td>
+</tr>
+<tr class="row-even"><td><p>400000</p></td>
+<td><p>0.4</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>4. Kesimpulan</strong></p>
+<p>Preprocessing merupakan tahap penting dalam pengolahan data sebelum dilakukan analisis atau pemodelan. Salah satu bagian utama dari preprocessing adalah normalisasi data yang bertujuan untuk menyamakan skala antar atribut.</p>
+<p>Metode normalisasi yang umum digunakan meliputi:</p>
+<ul class="simple">
+<li><p>Min-Max untuk rentang 0–1</p></li>
+<li><p>Z-Score berdasarkan rata-rata dan standar deviasi</p></li>
+<li><p>Decimal Scaling menggunakan pembagian pangkat 10</p></li>
+</ul>
+<p>Dengan melakukan preprocessing yang baik, data menjadi lebih siap untuk dianalisis sehingga hasil yang diperoleh lebih akurat dan dapat diandalkan.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -428,14 +571,14 @@ Yuk mulai perjalanan kita di dunia data mining !!!!</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="Pengantar_Data_Mining.html"
-       title="next page">
+    <a class="left-prev"
+       href="Missing%20Value%20Imputation%20Menggunakan%20WKNN.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Pengantar Data Mining</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Missing Value Imputation Menggunakan WKNN</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
