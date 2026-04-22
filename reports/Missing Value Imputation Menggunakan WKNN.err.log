@@ -54,12 +54,11 @@ print("Hasil prediksi JML:", prediksi[0])
 
 [31m---------------------------------------------------------------------------[39m
 [31mModuleNotFoundError[39m                       Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 3[39m
-[32m      1[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mpandas[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mpd[39;00m
-[32m      2[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mnp[39;00m
-[32m----> [39m[32m3[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01msklearn[39;00m[34;01m.[39;00m[34;01mpreprocessing[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m MinMaxScaler
-[32m      4[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01msklearn[39;00m[34;01m.[39;00m[34;01mneighbors[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m KNeighborsRegressor
-[32m      6[39m [38;5;66;03m# dataset[39;00m
+[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 1[39m
+[32m----> [39m[32m1[39m [38;5;28;01mimport[39;00m pandas [38;5;28;01mas[39;00m pd
+[32m      2[39m [38;5;28;01mimport[39;00m numpy [38;5;28;01mas[39;00m np
+[32m      3[39m [38;5;28;01mfrom[39;00m sklearn.preprocessing [38;5;28;01mimport[39;00m MinMaxScaler
+[32m      4[39m [38;5;28;01mfrom[39;00m sklearn.neighbors [38;5;28;01mimport[39;00m KNeighborsRegressor
 
-[31mModuleNotFoundError[39m: No module named 'sklearn'
+[31mModuleNotFoundError[39m: No module named 'pandas'
 
