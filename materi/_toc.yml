@@ -1,0 +1,14 @@
+# Table of contents
+# https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+
+chapters:
+  - file: Pengantar_Data_Mining
+  - file: Memahami_Data
+  - file: Data_Understanding
+  - file: pengukuran jarak
+  - file: Missing Value Imputation Menggunakan WKNN
+  - file: Preprocessing
+  - file: Jawaban UTS
