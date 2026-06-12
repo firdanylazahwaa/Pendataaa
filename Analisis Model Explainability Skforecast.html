@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>SELAMAT DATANG DI PENAMBANGAN DATA &#8212; Penambangan Data</title>
+    <title>Analisis Model Explainability Skforecast &#8212; Penambangan Data</title>
   
   
   
@@ -62,10 +62,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Analisis Model Explainability Skforecast';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Pengantar Data Mining" href="Pengantar_Data_Mining.html" />
+    <link rel="prev" title="Peramalan kadar \(NO_2\) di daerah Bangkalan Madura" href="Peramalan%20kadar%20NO2%20di%20daerah%20Bangkalan%20Madura.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -128,8 +128,6 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -148,7 +146,7 @@ const thebe_selector_output = ".output, .cell_output"
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -168,13 +166,13 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     SELAMAT DATANG DI PENAMBANGAN DATA
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Pengantar_Data_Mining.html">Pengantar Data Mining</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Memahami_Data.html">Memahami Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Data_Understanding.html">Data Understanding</a></li>
@@ -184,7 +182,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Jawaban_UTS.html">Jawaban UTS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Analisis%20Data%20Menggunakan%20Regresi%20Linier.html">Analisis Data Menggunakan Regresi Linier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Peramalan%20kadar%20NO2%20di%20daerah%20Bangkalan%20Madura.html">Peramalan kadar <span class="math notranslate nohighlight">\(NO_2\)</span> di daerah Bangkalan Madura</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Analisis%20Model%20Explainability%20Skforecast.html">Analisis Model Explainability Skforecast</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Analisis Model Explainability Skforecast</a></li>
 </ul>
 
     </div>
@@ -256,7 +254,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FAnalisis Model Explainability Skforecast.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -286,7 +284,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/Analisis Model Explainability Skforecast.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -296,7 +294,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -357,7 +355,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -368,11 +368,26 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>SELAMAT DATANG DI PENAMBANGAN DATA</h1>
+    <h1>Analisis Model Explainability Skforecast</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisa-prediksi-tentang-apa">1. Analisa prediksi tentang apa?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagaimana-bentuk-data-trainingnya">2. Bagaimana bentuk data trainingnya?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input-x-train">Input (X_train)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output-y-train">Output (y_train)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-lag">3. Apa itu lag?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jelaskan-proses-analisis-yang-dilakukan">4. Jelaskan proses analisis yang dilakukan</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -382,28 +397,61 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="selamat-datang-di-penambangan-data">
-<h1>SELAMAT DATANG DI PENAMBANGAN DATA<a class="headerlink" href="#selamat-datang-di-penambangan-data" title="Permalink to this heading">#</a></h1>
-<p>Di era digital seperti sekarang, data ada di mana-mana. Tapi data saja belum cukup — kita perlu mengolahnya agar bisa menjadi informasi yang bermakna dan membantu dalam pengambilan keputusan.</p>
-<p>Di materi ini, kita akan belajar bagaimana cara “menambang” data untuk menemukan pola tersembunyi, melakukan klasifikasi, clustering, hingga membuat prediksi berbasis data. Semua dibahas dengan pendekatan yang mudah dipahami dan langsung praktik.</p>
-<p>Nama: Firda Nayla Zahwa</p>
-<p>NIM: 240411100039</p>
-<p>Siap untuk mengeksplorasi data, mencoba berbagai tools, dan menemukan insight menarik?
-Yuk mulai perjalanan kita di dunia data mining !!!!</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Pengantar_Data_Mining.html">Pengantar Data Mining</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Memahami_Data.html">Memahami Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Data_Understanding.html">Data Understanding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pengukuran%20jarak.html">Pengukuran Jarak</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Missing%20Value%20Imputation%20Menggunakan%20WKNN.html">Missing Value Imputation Menggunakan WKNN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Preprocessing.html">Preprocessing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Jawaban_UTS.html">Jawaban UTS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Analisis%20Data%20Menggunakan%20Regresi%20Linier.html">Analisis Data Menggunakan Regresi Linier</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Peramalan%20kadar%20NO2%20di%20daerah%20Bangkalan%20Madura.html">Peramalan kadar <span class="math notranslate nohighlight">\(NO_2\)</span> di daerah Bangkalan Madura</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Analisis%20Model%20Explainability%20Skforecast.html">Analisis Model Explainability Skforecast</a></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="analisis-model-explainability-skforecast">
+<h1>Analisis Model Explainability Skforecast<a class="headerlink" href="#analisis-model-explainability-skforecast" title="Permalink to this heading">#</a></h1>
+<section id="analisa-prediksi-tentang-apa">
+<h2>1. Analisa prediksi tentang apa?<a class="headerlink" href="#analisa-prediksi-tentang-apa" title="Permalink to this heading">#</a></h2>
+<p>Model digunakan untuk memprediksi nilai Demand (permintaan energi/listrik) pada periode berikutnya berdasarkan data historis Demand dan variabel eksternal berupa Temperature (suhu).</p>
+</section>
+<section id="bagaimana-bentuk-data-trainingnya">
+<h2>2. Bagaimana bentuk data trainingnya?<a class="headerlink" href="#bagaimana-bentuk-data-trainingnya" title="Permalink to this heading">#</a></h2>
+<p>Data training terdiri dari:</p>
+<section id="input-x-train">
+<h3>Input (X_train)<a class="headerlink" href="#input-x-train" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>lag_1</p></li>
+<li><p>lag_2</p></li>
+<li><p>lag_3</p></li>
+<li><p>lag_4</p></li>
+<li><p>lag_5</p></li>
+<li><p>lag_6</p></li>
+<li><p>lag_7</p></li>
+<li><p>Temperature</p></li>
 </ul>
-</div>
+<p>Lag merupakan nilai Demand pada periode-periode sebelumnya.</p>
+</section>
+<section id="output-y-train">
+<h3>Output (y_train)<a class="headerlink" href="#output-y-train" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Demand yang akan diprediksi pada periode berikutnya.</p></li>
+</ul>
+<p>Jadi, input model adalah data Demand masa lalu dan Temperature, sedangkan outputnya adalah nilai Demand yang diprediksi.</p>
+</section>
+</section>
+<section id="apa-itu-lag">
+<h2>3. Apa itu lag?<a class="headerlink" href="#apa-itu-lag" title="Permalink to this heading">#</a></h2>
+<p>Lag adalah data historis atau data masa lalu yang digunakan sebagai fitur untuk melakukan prediksi.</p>
+<p>Contoh:</p>
+<ul class="simple">
+<li><p>lag_1 = Demand 1 periode sebelumnya</p></li>
+<li><p>lag_2 = Demand 2 periode sebelumnya</p></li>
+<li><p>lag_3 = Demand 3 periode sebelumnya</p></li>
+</ul>
+<p>Pada kasus ini digunakan lag_1 sampai lag_7.</p>
+</section>
+<section id="jelaskan-proses-analisis-yang-dilakukan">
+<h2>4. Jelaskan proses analisis yang dilakukan<a class="headerlink" href="#jelaskan-proses-analisis-yang-dilakukan" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Mengumpulkan data Demand dan Temperature.</p></li>
+<li><p>Membuat fitur lag dari data Demand.</p></li>
+<li><p>Membagi data menjadi training dan testing.</p></li>
+<li><p>Melatih model forecasting menggunakan data training.</p></li>
+<li><p>Melakukan prediksi pada data testing.</p></li>
+<li><p>Menggunakan metode SHAP untuk menjelaskan hasil prediksi.</p></li>
+<li><p>Menganalisis fitur yang paling berpengaruh terhadap prediksi.</p></li>
+<li><p>Menarik kesimpulan berdasarkan kontribusi masing-masing fitur.</p></li>
+</ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -436,14 +484,14 @@ Yuk mulai perjalanan kita di dunia data mining !!!!</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="Pengantar_Data_Mining.html"
-       title="next page">
+    <a class="left-prev"
+       href="Peramalan%20kadar%20NO2%20di%20daerah%20Bangkalan%20Madura.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Pengantar Data Mining</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Peramalan kadar <span class="math notranslate nohighlight">\(NO_2\)</span> di daerah Bangkalan Madura</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -451,6 +499,28 @@ Yuk mulai perjalanan kita di dunia data mining !!!!</p>
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisa-prediksi-tentang-apa">1. Analisa prediksi tentang apa?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagaimana-bentuk-data-trainingnya">2. Bagaimana bentuk data trainingnya?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input-x-train">Input (X_train)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output-y-train">Output (y_train)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-lag">3. Apa itu lag?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jelaskan-proses-analisis-yang-dilakukan">4. Jelaskan proses analisis yang dilakukan</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
