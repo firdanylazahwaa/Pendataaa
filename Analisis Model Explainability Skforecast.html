@@ -355,9 +355,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -373,21 +371,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisa-prediksi-tentang-apa">1. Analisa prediksi tentang apa?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagaimana-bentuk-data-trainingnya">2. Bagaimana bentuk data trainingnya?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input-x-train">Input (X_train)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output-y-train">Output (y_train)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-lag">3. Apa itu lag?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jelaskan-proses-analisis-yang-dilakukan">4. Jelaskan proses analisis yang dilakukan</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -397,17 +380,13 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="analisis-model-explainability-skforecast">
+  <section id="analisis-model-explainability-skforecast">
 <h1>Analisis Model Explainability Skforecast<a class="headerlink" href="#analisis-model-explainability-skforecast" title="Permalink to this heading">#</a></h1>
-<section id="analisa-prediksi-tentang-apa">
-<h2>1. Analisa prediksi tentang apa?<a class="headerlink" href="#analisa-prediksi-tentang-apa" title="Permalink to this heading">#</a></h2>
+<p><em>1. Analisa prediksi tentang apa?</em></p>
 <p>Model digunakan untuk memprediksi nilai Demand (permintaan energi/listrik) pada periode berikutnya berdasarkan data historis Demand dan variabel eksternal berupa Temperature (suhu).</p>
-</section>
-<section id="bagaimana-bentuk-data-trainingnya">
-<h2>2. Bagaimana bentuk data trainingnya?<a class="headerlink" href="#bagaimana-bentuk-data-trainingnya" title="Permalink to this heading">#</a></h2>
+<p><em>2. Bagaimana bentuk data trainingnya?</em></p>
 <p>Data training terdiri dari:</p>
-<section id="input-x-train">
-<h3>Input (X_train)<a class="headerlink" href="#input-x-train" title="Permalink to this heading">#</a></h3>
+<p><em>Input (X_train)</em></p>
 <ul class="simple">
 <li><p>lag_1</p></li>
 <li><p>lag_2</p></li>
@@ -419,17 +398,12 @@ document.write(`
 <li><p>Temperature</p></li>
 </ul>
 <p>Lag merupakan nilai Demand pada periode-periode sebelumnya.</p>
-</section>
-<section id="output-y-train">
-<h3>Output (y_train)<a class="headerlink" href="#output-y-train" title="Permalink to this heading">#</a></h3>
+<p><em>Output (y_train)</em></p>
 <ul class="simple">
 <li><p>Demand yang akan diprediksi pada periode berikutnya.</p></li>
 </ul>
 <p>Jadi, input model adalah data Demand masa lalu dan Temperature, sedangkan outputnya adalah nilai Demand yang diprediksi.</p>
-</section>
-</section>
-<section id="apa-itu-lag">
-<h2>3. Apa itu lag?<a class="headerlink" href="#apa-itu-lag" title="Permalink to this heading">#</a></h2>
+<p><em>3. Apa itu lag?</em></p>
 <p>Lag adalah data historis atau data masa lalu yang digunakan sebagai fitur untuk melakukan prediksi.</p>
 <p>Contoh:</p>
 <ul class="simple">
@@ -438,9 +412,7 @@ document.write(`
 <li><p>lag_3 = Demand 3 periode sebelumnya</p></li>
 </ul>
 <p>Pada kasus ini digunakan lag_1 sampai lag_7.</p>
-</section>
-<section id="jelaskan-proses-analisis-yang-dilakukan">
-<h2>4. Jelaskan proses analisis yang dilakukan<a class="headerlink" href="#jelaskan-proses-analisis-yang-dilakukan" title="Permalink to this heading">#</a></h2>
+<p><em>4. Jelaskan proses analisis yang dilakukan</em></p>
 <ol class="arabic simple">
 <li><p>Mengumpulkan data Demand dan Temperature.</p></li>
 <li><p>Membuat fitur lag dari data Demand.</p></li>
@@ -451,7 +423,6 @@ document.write(`
 <li><p>Menganalisis fitur yang paling berpengaruh terhadap prediksi.</p></li>
 <li><p>Menarik kesimpulan berdasarkan kontribusi masing-masing fitur.</p></li>
 </ol>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -499,28 +470,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisa-prediksi-tentang-apa">1. Analisa prediksi tentang apa?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagaimana-bentuk-data-trainingnya">2. Bagaimana bentuk data trainingnya?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input-x-train">Input (X_train)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output-y-train">Output (y_train)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-lag">3. Apa itu lag?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jelaskan-proses-analisis-yang-dilakukan">4. Jelaskan proses analisis yang dilakukan</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
