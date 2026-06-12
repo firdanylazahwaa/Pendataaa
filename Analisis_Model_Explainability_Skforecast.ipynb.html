@@ -7,8 +7,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; Penambangan Data</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Analisis Model Explainability Skforecast &#8212; Penambangan Data</title>
   
   
   
@@ -61,8 +62,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
-    <link rel="index" title="Index" href="#" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Analisis_Model_Explainability_Skforecast.ipynb';</script>
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -253,7 +254,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FAnalisis_Model_Explainability_Skforecast.ipynb.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -265,6 +266,54 @@ const thebe_selector_output = ".output, .cell_output"
   </span>
 <span class="btn__text-container">Open issue</span>
 </a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Analisis_Model_Explainability_Skforecast.ipynb.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
 </li>
       
   </ul>
@@ -317,7 +366,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1></h1>
+    <h1>Analisis Model Explainability Skforecast</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -331,13 +380,70 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
+  <section id="analisis-model-explainability-skforecast">
+<h1>Analisis Model Explainability Skforecast<a class="headerlink" href="#analisis-model-explainability-skforecast" title="Permalink to this heading">#</a></h1>
+<p><em>1. Analisa prediksi tentang apa?</em></p>
+<p>Model digunakan untuk memprediksi nilai Demand (permintaan energi/listrik) pada periode berikutnya berdasarkan data historis Demand dan variabel eksternal berupa Temperature (suhu).</p>
+<p><em>2. Bagaimana bentuk data trainingnya?</em></p>
+<p>Data training terdiri dari:</p>
+<p><em>Input (X_train)</em></p>
+<ul class="simple">
+<li><p>lag_1</p></li>
+<li><p>lag_2</p></li>
+<li><p>lag_3</p></li>
+<li><p>lag_4</p></li>
+<li><p>lag_5</p></li>
+<li><p>lag_6</p></li>
+<li><p>lag_7</p></li>
+<li><p>Temperature</p></li>
+</ul>
+<p>Lag merupakan nilai Demand pada periode-periode sebelumnya.</p>
+<p><em>Output (y_train)</em></p>
+<ul class="simple">
+<li><p>Demand yang akan diprediksi pada periode berikutnya.</p></li>
+</ul>
+<p>Jadi, input model adalah data Demand masa lalu dan Temperature, sedangkan outputnya adalah nilai Demand yang diprediksi.</p>
+<p><em>3. Apa itu lag?</em></p>
+<p>Lag adalah data historis atau data masa lalu yang digunakan sebagai fitur untuk melakukan prediksi.</p>
+<p>Contoh:</p>
+<ul class="simple">
+<li><p>lag_1 = Demand 1 periode sebelumnya</p></li>
+<li><p>lag_2 = Demand 2 periode sebelumnya</p></li>
+<li><p>lag_3 = Demand 3 periode sebelumnya</p></li>
+</ul>
+<p>Pada kasus ini digunakan lag_1 sampai lag_7.</p>
+<p><em>4. Jelaskan proses analisis yang dilakukan</em></p>
+<ol class="arabic simple">
+<li><p>Mengumpulkan data Demand dan Temperature.</p></li>
+<li><p>Membuat fitur lag dari data Demand.</p></li>
+<li><p>Membagi data menjadi training dan testing.</p></li>
+<li><p>Melatih model forecasting menggunakan data training.</p></li>
+<li><p>Melakukan prediksi pada data testing.</p></li>
+<li><p>Menggunakan metode SHAP untuk menjelaskan hasil prediksi.</p></li>
+<li><p>Menganalisis fitur yang paling berpengaruh terhadap prediksi.</p></li>
+<li><p>Menarik kesimpulan berdasarkan kontribusi masing-masing fitur.</p></li>
+</ol>
+</section>
 
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
-</div>
-
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
